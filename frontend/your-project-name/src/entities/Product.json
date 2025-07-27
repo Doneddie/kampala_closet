@@ -1,0 +1,63 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Product price"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "dresses",
+        "tops",
+        "bottoms",
+        "accessories",
+        "shoes",
+        "outerwear"
+      ],
+      "description": "Product category"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Product image URL"
+    },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available sizes"
+    },
+    "colors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available colors"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": true,
+      "description": "Product availability"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Featured product"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category"
+  ]
+}
